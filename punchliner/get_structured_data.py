@@ -23,7 +23,7 @@ def get_artist_lyrics(artist, client_access_token, keep_data=True):
     """
     # Get the data
     api = genius.Genius(client_access_token)
-    artist_guy = api.search_artist(artist, max_songs=3)
+    artist_guy = api.search_artist(artist)
     data = artist_guy.save_lyrics()
          
     # Remove json file or not
